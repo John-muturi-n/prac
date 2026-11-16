@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunrise Bay Hotel | Stay by the ocean</title>
+<meta name="description" content="Ocean-view rooms, fresh seafood and a private beach. Book your stay at Sunrise Bay Hotel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lagoon:#0f3b3a; --deep:#0a2a29; --glass:#cfe3dc; --sun:#e8b04a;
+    --paper:#f7fbf9; --ink:#12201f;
+    --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 24px}
+
+  header{position:absolute;inset:0 0 auto 0;z-index:2}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;max-width:1050px;margin:0 auto;color:#fff}
+  nav .logo{font-family:var(--serif);font-size:1.5rem;font-weight:700;text-decoration:none}
+  nav ul{display:flex;gap:24px;list-style:none;padding:0}
+  nav ul a{text-decoration:none;font-size:.95rem}
+  nav ul a:hover{text-decoration:underline}
+
+  .hero{background:linear-gradient(180deg,#0a2a29 0%,#0f3b3a 55%,#1d6a63 100%);color:#fff;padding:150px 0 0;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:8%;top:90px;width:150px;height:150px;border-radius:50%;background:var(--sun);opacity:.9;box-shadow:0 0 90px 30px rgba(232,176,74,.35)}
+  .hero h1{font-family:var(--serif);font-size:clamp(3rem,10vw,6.5rem);line-height:.95;font-weight:700;max-width:9ch;position:relative;z-index:1}
+  .hero p.lead{font-size:1.2rem;max-width:34ch;margin:22px 0 34px;color:var(--glass);position:relative;z-index:1}
+  .btn{display:inline-block;background:var(--sun);color:var(--deep);padding:14px 28px;border-radius:999px;font-weight:500;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:500}
+  .btn:hover{background:#f1c26b}
+
+  .book{background:#fff;color:var(--ink);border-radius:16px;padding:22px;margin-top:70px;transform:translateY(50%);box-shadow:0 18px 50px rgba(10,42,41,.25);display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;align-items:end;position:relative;z-index:1}
+  .book label{display:block;font-size:.85rem;color:#4a5f5c;margin-bottom:4px}
+  .book input,.book select{width:100%;padding:11px 12px;border:1px solid #b9cdc7;border-radius:8px;font:inherit;background:#fff}
+  .spacer{height:70px}
+
+  section{padding:80px 0}
+  h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);color:var(--lagoon);line-height:1.1;margin-bottom:12px}
+  .sub{max-width:52ch;color:#44605c;margin-bottom:40px}
+
+  .rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+  .room{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #d6e5e0}
+  .room .pic{height:170px;display:grid;place-items:center;font-size:3.2rem}
+  .room:nth-child(1) .pic{background:linear-gradient(135deg,#cfe3dc,#9cc9bd)}
+  .room:nth-child(2) .pic{background:linear-gradient(135deg,#f5dfae,#e8b04a)}
+  .room:nth-child(3) .pic{background:linear-gradient(135deg,#1d6a63,#0f3b3a)}
+  .room .body{padding:20px}
+  .room h3{font-family:var(--serif);font-size:1.6rem;color:var(--lagoon)}
+  .room p{font-size:.95rem;color:#44605c;margin:6px 0 14px}
+  .price{font-weight:500}
+  .price small{font-weight:400;color:#6b807c}
+
+  .amen{background:var(--lagoon);color:#fff}
+  .amen h2{color:#fff}
+  .amen .sub{color:var(--glass)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+  .grid div{border-top:2px solid var(--sun);padding-top:14px}
+  .grid h3{font-family:var(--serif);font-size:1.4rem}
+  .grid p{color:var(--glass);font-size:.95rem}
+
+  .quote{text-align:center}
+  .quote blockquote{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2.3rem);max-width:30ch;margin:0 auto 12px;color:var(--lagoon)}
+  .quote cite{color:#5a716d;font-style:normal}
+
+  .contact{background:var(--glass)}
+  .contact .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+  .contact p{margin-bottom:6px}
+  footer{background:var(--deep);color:var(--glass);text-align:center;padding:24px;font-size:.9rem}
+
+  @media (max-width:640px){nav ul{display:none}.hero::after{width:90px;height:90px;top:80px}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="#top">Sunrise Bay</a>
+    <ul>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Wake up to the ocean</h1>
+      <p class="lead">Ocean-view rooms, fresh seafood and a private beach, five minutes from the town centre.</p>
+      <a class="btn" href="#rooms">See our rooms</a>
+
+      <form class="book" id="bookForm">
+        <div><label for="cin">Check-in</label><input type="date" id="cin" required></div>
+        <div><label for="cout">Check-out</label><input type="date" id="cout" required></div>
+        <div><label for="guests">Guests</label>
+          <select id="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select>
+        </div>
+        <button class="btn" type="submit">Book on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+  <div class="spacer"></div>
+
+  <section id="rooms">
+    <div class="wrap">
+      <h2>Choose your room</h2>
+      <p class="sub">Every room has air conditioning, free Wi-Fi, breakfast and a private balcony.</p>
+      <div class="rooms">
+        <article class="room"><div class="pic" aria-hidden="true">🛏️</div><div class="body">
+          <h3>Standard Room</h3><p>Queen bed, garden view and a rain shower. Good for solo travellers and couples.</p>
+          <p class="price">KES 6,500 <small>/ night</small></p></div></article>
+        <article class="room"><div class="pic" aria-hidden="true">🌅</div><div class="body">
+          <h3>Ocean View Suite</h3><p>King bed, sitting area and a balcony facing the sunrise.</p>
+          <p class="price">KES 11,000 <small>/ night</small></p></div></article>
+        <article class="room"><div class="pic" aria-hidden="true">👨‍👩‍👧‍👦</div><div class="body">
+          <h3>Family Villa</h3><p>Two bedrooms, a kitchenette and steps from the beach. Sleeps up to six.</p>
+          <p class="price">KES 18,000 <small>/ night</small></p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="amen" id="amenities">
+    <div class="wrap">
+      <h2>Everything you need for a slow weekend</h2>
+      <p class="sub">Relax by the water, eat well and let us handle the rest.</p>
+      <div class="grid">
+        <div><h3>Private beach</h3><p>Loungers and umbrellas are free for guests.</p></div>
+        <div><h3>Swimming pool</h3><p>Open from 7 am to 9 pm, with a shallow end for kids.</p></div>
+        <div><h3>Seafood restaurant</h3><p>Catch of the day, grilled to order. Breakfast is included.</p></div>
+        <div><h3>Airport transfers</h3><p>We collect you on arrival. Ask when you book.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap">
+      <blockquote>“The best sunrise breakfast we have ever had. We are already planning our return.”</blockquote>
+      <cite>Amina and Peter, stayed 3 nights</cite>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Ready to book?</h2>
+      <p class="sub">Message us and we will confirm your dates within the hour.</p>
+      <div class="cols">
+        <div>
+          <p><strong>Phone / WhatsApp</strong></p>
+          <p><a href="tel:+254700000000">+254 700 000 000</a></p>
+          <p><a href="mailto:stay@sunrisebay.example">stay@sunrisebay.example</a></p>
+        </div>
+        <div>
+          <p><strong>Address</strong></p>
+          <p>Beach Road, Your Town, Kenya</p>
+          <p>Check-in 2 pm · Check-out 11 am</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Sunrise Bay Hotel. All rights reserved.</footer>
+
+<script>
+  // Change this to your hotel's WhatsApp number (country code, no + or spaces)
+  var WHATSAPP = "254700000000";
+
+  var today = new Date().toISOString().split("T")[0];
+  var cin = document.getElementById("cin"), cout = document.getElementById("cout");
+  cin.min = cout.min = today;
+  cin.addEventListener("change", function(){ cout.min = cin.value || today; });
+
+  document.getElementById("bookForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var msg = "Hello, I would like to book a room at Sunrise Bay Hotel.\n" +
+      "Check-in: " + cin.value + "\nCheck-out: " + cout.value +
+      "\nGuests: " + document.getElementById("guests").value;
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg), "_blank");
+  });
+</script>
+</body>
+</html>
